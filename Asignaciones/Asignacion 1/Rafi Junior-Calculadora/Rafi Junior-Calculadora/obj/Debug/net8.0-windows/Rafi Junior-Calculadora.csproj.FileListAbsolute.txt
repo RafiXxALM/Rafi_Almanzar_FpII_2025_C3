@@ -1,0 +1,6 @@
+C:\Users\RafiXxALM\Desktop\Espacio De Trabajo Fund. De Programacion II\Rafi Junior-Calculadora\Rafi Junior-Calculadora\obj\Debug\net8.0-windows\Rafi_Junior_Calculadora.Form1.resources
+C:\Users\RafiXxALM\Desktop\Espacio De Trabajo Fund. De Programacion II\Rafi Junior-Calculadora\Rafi Junior-Calculadora\obj\Debug\net8.0-windows\Rafi Junior-Calculadora.csproj.GenerateResource.cache
+C:\Users\RafiXxALM\Desktop\Espacio De Trabajo Fund. De Programacion II\Rafi Junior-Calculadora\Rafi Junior-Calculadora\obj\Debug\net8.0-windows\Rafi Junior-Calculadora.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\RafiXxALM\Desktop\Espacio De Trabajo Fund. De Programacion II\Rafi Junior-Calculadora\Rafi Junior-Calculadora\obj\Debug\net8.0-windows\Rafi Junior-Calculadora.AssemblyInfoInputs.cache
+C:\Users\RafiXxALM\Desktop\Espacio De Trabajo Fund. De Programacion II\Rafi Junior-Calculadora\Rafi Junior-Calculadora\obj\Debug\net8.0-windows\Rafi Junior-Calculadora.AssemblyInfo.cs
+C:\Users\RafiXxALM\Desktop\Espacio De Trabajo Fund. De Programacion II\Rafi Junior-Calculadora\Rafi Junior-Calculadora\obj\Debug\net8.0-windows\Rafi Junior-Calculadora.csproj.CoreCompileInputs.cache
