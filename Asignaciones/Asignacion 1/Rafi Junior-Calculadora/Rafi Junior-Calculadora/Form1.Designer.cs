@@ -48,8 +48,8 @@ namespace Rafi_Junior_Calculadora
             btnDividir = new Button();
             btnRestar = new Button();
             btnSumar = new Button();
-            btnIgual = new Button();
-            btnPunto = new Button();
+            btnResultado = new Button();
+            btnComa = new Button();
             btnCero = new Button();
             btnSigno = new Button();
             SuspendLayout();
@@ -58,6 +58,7 @@ namespace Rafi_Junior_Calculadora
             // 
             txtResultado.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtResultado.Location = new Point(12, 12);
+            txtResultado.MaxLength = 14;
             txtResultado.Multiline = true;
             txtResultado.Name = "txtResultado";
             txtResultado.ReadOnly = true;
@@ -75,6 +76,7 @@ namespace Rafi_Junior_Calculadora
             btnUno.TabIndex = 1;
             btnUno.Text = "1";
             btnUno.UseVisualStyleBackColor = true;
+            btnUno.Click += agregarNumero;
             // 
             // btnDos
             // 
@@ -85,6 +87,7 @@ namespace Rafi_Junior_Calculadora
             btnDos.TabIndex = 2;
             btnDos.Text = "2";
             btnDos.UseVisualStyleBackColor = true;
+            btnDos.Click += agregarNumero;
             // 
             // btnTres
             // 
@@ -95,6 +98,7 @@ namespace Rafi_Junior_Calculadora
             btnTres.TabIndex = 3;
             btnTres.Text = "3";
             btnTres.UseVisualStyleBackColor = true;
+            btnTres.Click += agregarNumero;
             // 
             // btnSeis
             // 
@@ -105,6 +109,7 @@ namespace Rafi_Junior_Calculadora
             btnSeis.TabIndex = 6;
             btnSeis.Text = "6";
             btnSeis.UseVisualStyleBackColor = true;
+            btnSeis.Click += agregarNumero;
             // 
             // btnCinco
             // 
@@ -115,7 +120,7 @@ namespace Rafi_Junior_Calculadora
             btnCinco.TabIndex = 5;
             btnCinco.Text = "5";
             btnCinco.UseVisualStyleBackColor = true;
-            btnCinco.Click += button5_Click;
+            btnCinco.Click += agregarNumero;
             // 
             // btnCuatro
             // 
@@ -126,6 +131,7 @@ namespace Rafi_Junior_Calculadora
             btnCuatro.TabIndex = 4;
             btnCuatro.Text = "4";
             btnCuatro.UseVisualStyleBackColor = true;
+            btnCuatro.Click += agregarNumero;
             // 
             // btnNueve
             // 
@@ -136,6 +142,7 @@ namespace Rafi_Junior_Calculadora
             btnNueve.TabIndex = 9;
             btnNueve.Text = "9";
             btnNueve.UseVisualStyleBackColor = true;
+            btnNueve.Click += agregarNumero;
             // 
             // btnOcho
             // 
@@ -146,6 +153,7 @@ namespace Rafi_Junior_Calculadora
             btnOcho.TabIndex = 8;
             btnOcho.Text = "8";
             btnOcho.UseVisualStyleBackColor = true;
+            btnOcho.Click += agregarNumero;
             // 
             // btnSiete
             // 
@@ -156,6 +164,7 @@ namespace Rafi_Junior_Calculadora
             btnSiete.TabIndex = 7;
             btnSiete.Text = "7";
             btnSiete.UseVisualStyleBackColor = true;
+            btnSiete.Click += agregarNumero;
             // 
             // btnQuitar
             // 
@@ -167,6 +176,7 @@ namespace Rafi_Junior_Calculadora
             btnQuitar.Text = "<-";
             btnQuitar.TextAlign = ContentAlignment.MiddleLeft;
             btnQuitar.UseVisualStyleBackColor = true;
+            btnQuitar.Click += btnQuitar_Click;
             // 
             // btnBorrarTodo
             // 
@@ -177,7 +187,7 @@ namespace Rafi_Junior_Calculadora
             btnBorrarTodo.TabIndex = 11;
             btnBorrarTodo.Text = "C";
             btnBorrarTodo.UseVisualStyleBackColor = true;
-            btnBorrarTodo.Click += button11_Click;
+            btnBorrarTodo.Click += btnBorrarTodo_Click;
             // 
             // btnBorrar
             // 
@@ -188,6 +198,7 @@ namespace Rafi_Junior_Calculadora
             btnBorrar.TabIndex = 10;
             btnBorrar.Text = "CE";
             btnBorrar.UseVisualStyleBackColor = true;
+            btnBorrar.Click += btnBorrar_Click;
             // 
             // btnCuadrado
             // 
@@ -196,9 +207,10 @@ namespace Rafi_Junior_Calculadora
             btnCuadrado.Name = "btnCuadrado";
             btnCuadrado.Size = new Size(50, 50);
             btnCuadrado.TabIndex = 14;
+            btnCuadrado.Tag = "²";
             btnCuadrado.Text = "x²";
             btnCuadrado.UseVisualStyleBackColor = true;
-            btnCuadrado.Click += button13_Click;
+            btnCuadrado.Click += clickOperador;
             // 
             // btnRaizCuadrada
             // 
@@ -207,9 +219,10 @@ namespace Rafi_Junior_Calculadora
             btnRaizCuadrada.Name = "btnRaizCuadrada";
             btnRaizCuadrada.Size = new Size(50, 50);
             btnRaizCuadrada.TabIndex = 13;
+            btnRaizCuadrada.Tag = "√";
             btnRaizCuadrada.Text = "√";
             btnRaizCuadrada.UseVisualStyleBackColor = true;
-            btnRaizCuadrada.Click += this.button14_Click;
+            btnRaizCuadrada.Click += clickOperador;
             // 
             // btnMultiplicar
             // 
@@ -218,8 +231,10 @@ namespace Rafi_Junior_Calculadora
             btnMultiplicar.Name = "btnMultiplicar";
             btnMultiplicar.Size = new Size(50, 50);
             btnMultiplicar.TabIndex = 16;
+            btnMultiplicar.Tag = "X";
             btnMultiplicar.Text = "X";
             btnMultiplicar.UseVisualStyleBackColor = true;
+            btnMultiplicar.Click += clickOperador;
             // 
             // btnDividir
             // 
@@ -228,8 +243,10 @@ namespace Rafi_Junior_Calculadora
             btnDividir.Name = "btnDividir";
             btnDividir.Size = new Size(50, 50);
             btnDividir.TabIndex = 15;
+            btnDividir.Tag = "⁄";
             btnDividir.Text = "⁄";
             btnDividir.UseVisualStyleBackColor = true;
+            btnDividir.Click += clickOperador;
             // 
             // btnRestar
             // 
@@ -238,8 +255,10 @@ namespace Rafi_Junior_Calculadora
             btnRestar.Name = "btnRestar";
             btnRestar.Size = new Size(50, 50);
             btnRestar.TabIndex = 18;
+            btnRestar.Tag = "‒";
             btnRestar.Text = "‒";
             btnRestar.UseVisualStyleBackColor = true;
+            btnRestar.Click += clickOperador;
             // 
             // btnSumar
             // 
@@ -248,28 +267,33 @@ namespace Rafi_Junior_Calculadora
             btnSumar.Name = "btnSumar";
             btnSumar.Size = new Size(50, 50);
             btnSumar.TabIndex = 17;
+            btnSumar.Tag = "+";
             btnSumar.Text = "+";
             btnSumar.UseVisualStyleBackColor = true;
+            btnSumar.Click += clickOperador;
             // 
-            // btnIgual
+            // btnResultado
             // 
-            btnIgual.Font = new Font("Segoe UI", 16F);
-            btnIgual.Location = new Point(206, 260);
-            btnIgual.Name = "btnIgual";
-            btnIgual.Size = new Size(106, 50);
-            btnIgual.TabIndex = 19;
-            btnIgual.Text = "=";
-            btnIgual.UseVisualStyleBackColor = true;
+            btnResultado.Font = new Font("Segoe UI", 16F);
+            btnResultado.Location = new Point(206, 260);
+            btnResultado.Name = "btnResultado";
+            btnResultado.Size = new Size(106, 50);
+            btnResultado.TabIndex = 19;
+            btnResultado.Tag = "=";
+            btnResultado.Text = "=";
+            btnResultado.UseVisualStyleBackColor = true;
+            btnResultado.Click += btnResultado_Click;
             // 
-            // btnPunto
+            // btnComa
             // 
-            btnPunto.Font = new Font("Segoe UI", 16F);
-            btnPunto.Location = new Point(124, 334);
-            btnPunto.Name = "btnPunto";
-            btnPunto.Size = new Size(50, 50);
-            btnPunto.TabIndex = 22;
-            btnPunto.Text = ",";
-            btnPunto.UseVisualStyleBackColor = true;
+            btnComa.Font = new Font("Segoe UI", 16F);
+            btnComa.Location = new Point(124, 334);
+            btnComa.Name = "btnComa";
+            btnComa.Size = new Size(50, 50);
+            btnComa.TabIndex = 22;
+            btnComa.Text = ",";
+            btnComa.UseVisualStyleBackColor = true;
+            btnComa.Click += btnComa_Click;
             // 
             // btnCero
             // 
@@ -280,6 +304,7 @@ namespace Rafi_Junior_Calculadora
             btnCero.TabIndex = 21;
             btnCero.Text = "0";
             btnCero.UseVisualStyleBackColor = true;
+            btnCero.Click += agregarNumero;
             // 
             // btnSigno
             // 
@@ -290,16 +315,17 @@ namespace Rafi_Junior_Calculadora
             btnSigno.TabIndex = 20;
             btnSigno.Text = "+/-";
             btnSigno.UseVisualStyleBackColor = true;
+            btnSigno.Click += btnSigno_Click;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(325, 419);
-            Controls.Add(btnPunto);
+            Controls.Add(btnComa);
             Controls.Add(btnCero);
             Controls.Add(btnSigno);
-            Controls.Add(btnIgual);
+            Controls.Add(btnResultado);
             Controls.Add(btnRestar);
             Controls.Add(btnSumar);
             Controls.Add(btnMultiplicar);
@@ -328,7 +354,7 @@ namespace Rafi_Junior_Calculadora
             PerformLayout();
         }
 
-       
+
 
         #endregion
 
@@ -351,8 +377,8 @@ namespace Rafi_Junior_Calculadora
         private Button btnDividir;
         private Button btnRestar;
         private Button btnSumar;
-        private Button btnIgual;
-        private Button btnPunto;
+        private Button btnResultado;
+        private Button btnComa;
         private Button btnCero;
         private Button btnSigno;
     }

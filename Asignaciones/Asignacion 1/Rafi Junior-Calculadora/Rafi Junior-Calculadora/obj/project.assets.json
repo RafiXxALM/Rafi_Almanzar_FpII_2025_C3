@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\RafiXxALM\\Desktop\\Espacio De Trabajo Fund. De Programacion II\\Rafi Junior-Calculadora\\Rafi Junior-Calculadora\\Rafi Junior-Calculadora.csproj",
+      "projectUniqueName": "C:\\Users\\RafiXxALM\\Desktop\\Espacio De Trabajo Fund. De Programacion II\\Asignaciones\\Asignacion 1\\Rafi Junior-Calculadora\\Rafi Junior-Calculadora\\Rafi Junior-Calculadora.csproj",
       "projectName": "Rafi Junior-Calculadora",
-      "projectPath": "C:\\Users\\RafiXxALM\\Desktop\\Espacio De Trabajo Fund. De Programacion II\\Rafi Junior-Calculadora\\Rafi Junior-Calculadora\\Rafi Junior-Calculadora.csproj",
+      "projectPath": "C:\\Users\\RafiXxALM\\Desktop\\Espacio De Trabajo Fund. De Programacion II\\Asignaciones\\Asignacion 1\\Rafi Junior-Calculadora\\Rafi Junior-Calculadora\\Rafi Junior-Calculadora.csproj",
       "packagesPath": "C:\\Users\\RafiXxALM\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\RafiXxALM\\Desktop\\Espacio De Trabajo Fund. De Programacion II\\Rafi Junior-Calculadora\\Rafi Junior-Calculadora\\obj\\",
+      "outputPath": "C:\\Users\\RafiXxALM\\Desktop\\Espacio De Trabajo Fund. De Programacion II\\Asignaciones\\Asignacion 1\\Rafi Junior-Calculadora\\Rafi Junior-Calculadora\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
