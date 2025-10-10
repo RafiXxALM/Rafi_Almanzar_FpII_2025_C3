@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "Ejercicio - Radianes a grados/1.0.0": {
+        "runtime": {
+          "Ejercicio - Radianes a grados.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Ejercicio - Radianes a grados/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

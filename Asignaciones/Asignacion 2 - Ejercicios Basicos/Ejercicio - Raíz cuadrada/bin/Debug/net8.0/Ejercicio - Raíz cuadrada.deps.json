@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "Ejercicio - Raíz cuadrada/1.0.0": {
+        "runtime": {
+          "Ejercicio - Raíz cuadrada.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Ejercicio - Raíz cuadrada/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

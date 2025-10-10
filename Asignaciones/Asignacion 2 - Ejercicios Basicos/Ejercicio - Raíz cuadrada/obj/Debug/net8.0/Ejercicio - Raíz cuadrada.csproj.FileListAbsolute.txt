@@ -1,0 +1,15 @@
+C:\Users\RafiXxALM\Desktop\Espacio De Trabajo Fund. De Programacion II\Asignaciones\Asignacion 2 - Ejercicios Basicos\Ejercicio - Raíz cuadrada\bin\Debug\net8.0\Ejercicio - Raíz cuadrada.exe
+C:\Users\RafiXxALM\Desktop\Espacio De Trabajo Fund. De Programacion II\Asignaciones\Asignacion 2 - Ejercicios Basicos\Ejercicio - Raíz cuadrada\bin\Debug\net8.0\Ejercicio - Raíz cuadrada.deps.json
+C:\Users\RafiXxALM\Desktop\Espacio De Trabajo Fund. De Programacion II\Asignaciones\Asignacion 2 - Ejercicios Basicos\Ejercicio - Raíz cuadrada\bin\Debug\net8.0\Ejercicio - Raíz cuadrada.runtimeconfig.json
+C:\Users\RafiXxALM\Desktop\Espacio De Trabajo Fund. De Programacion II\Asignaciones\Asignacion 2 - Ejercicios Basicos\Ejercicio - Raíz cuadrada\bin\Debug\net8.0\Ejercicio - Raíz cuadrada.dll
+C:\Users\RafiXxALM\Desktop\Espacio De Trabajo Fund. De Programacion II\Asignaciones\Asignacion 2 - Ejercicios Basicos\Ejercicio - Raíz cuadrada\bin\Debug\net8.0\Ejercicio - Raíz cuadrada.pdb
+C:\Users\RafiXxALM\Desktop\Espacio De Trabajo Fund. De Programacion II\Asignaciones\Asignacion 2 - Ejercicios Basicos\Ejercicio - Raíz cuadrada\obj\Debug\net8.0\Ejercicio - Raíz cuadrada.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\RafiXxALM\Desktop\Espacio De Trabajo Fund. De Programacion II\Asignaciones\Asignacion 2 - Ejercicios Basicos\Ejercicio - Raíz cuadrada\obj\Debug\net8.0\Ejercicio - Raíz cuadrada.AssemblyInfoInputs.cache
+C:\Users\RafiXxALM\Desktop\Espacio De Trabajo Fund. De Programacion II\Asignaciones\Asignacion 2 - Ejercicios Basicos\Ejercicio - Raíz cuadrada\obj\Debug\net8.0\Ejercicio - Raíz cuadrada.AssemblyInfo.cs
+C:\Users\RafiXxALM\Desktop\Espacio De Trabajo Fund. De Programacion II\Asignaciones\Asignacion 2 - Ejercicios Basicos\Ejercicio - Raíz cuadrada\obj\Debug\net8.0\Ejercicio - Raíz cuadrada.csproj.CoreCompileInputs.cache
+C:\Users\RafiXxALM\Desktop\Espacio De Trabajo Fund. De Programacion II\Asignaciones\Asignacion 2 - Ejercicios Basicos\Ejercicio - Raíz cuadrada\obj\Debug\net8.0\Ejercicio - Raíz cuadrada.sourcelink.json
+C:\Users\RafiXxALM\Desktop\Espacio De Trabajo Fund. De Programacion II\Asignaciones\Asignacion 2 - Ejercicios Basicos\Ejercicio - Raíz cuadrada\obj\Debug\net8.0\Ejercicio - Raíz cuadrada.dll
+C:\Users\RafiXxALM\Desktop\Espacio De Trabajo Fund. De Programacion II\Asignaciones\Asignacion 2 - Ejercicios Basicos\Ejercicio - Raíz cuadrada\obj\Debug\net8.0\refint\Ejercicio - Raíz cuadrada.dll
+C:\Users\RafiXxALM\Desktop\Espacio De Trabajo Fund. De Programacion II\Asignaciones\Asignacion 2 - Ejercicios Basicos\Ejercicio - Raíz cuadrada\obj\Debug\net8.0\Ejercicio - Raíz cuadrada.pdb
+C:\Users\RafiXxALM\Desktop\Espacio De Trabajo Fund. De Programacion II\Asignaciones\Asignacion 2 - Ejercicios Basicos\Ejercicio - Raíz cuadrada\obj\Debug\net8.0\Ejercicio - Raíz cuadrada.genruntimeconfig.cache
+C:\Users\RafiXxALM\Desktop\Espacio De Trabajo Fund. De Programacion II\Asignaciones\Asignacion 2 - Ejercicios Basicos\Ejercicio - Raíz cuadrada\obj\Debug\net8.0\ref\Ejercicio - Raíz cuadrada.dll
