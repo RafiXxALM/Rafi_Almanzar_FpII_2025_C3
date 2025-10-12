@@ -1,0 +1,15 @@
+C:\Users\RafiXxALM\Desktop\Espacio De Trabajo Fund. De Programacion II\Asignaciones\Asignacion 2 - Ejercicios Basicos\Ejercicio - Inductancia\obj\Debug\net8.0\Ejercicio - Inductancia.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\RafiXxALM\Desktop\Espacio De Trabajo Fund. De Programacion II\Asignaciones\Asignacion 2 - Ejercicios Basicos\Ejercicio - Inductancia\obj\Debug\net8.0\Ejercicio - Inductancia.AssemblyInfoInputs.cache
+C:\Users\RafiXxALM\Desktop\Espacio De Trabajo Fund. De Programacion II\Asignaciones\Asignacion 2 - Ejercicios Basicos\Ejercicio - Inductancia\obj\Debug\net8.0\Ejercicio - Inductancia.AssemblyInfo.cs
+C:\Users\RafiXxALM\Desktop\Espacio De Trabajo Fund. De Programacion II\Asignaciones\Asignacion 2 - Ejercicios Basicos\Ejercicio - Inductancia\obj\Debug\net8.0\Ejercicio - Inductancia.csproj.CoreCompileInputs.cache
+C:\Users\RafiXxALM\Desktop\Espacio De Trabajo Fund. De Programacion II\Asignaciones\Asignacion 2 - Ejercicios Basicos\Ejercicio - Inductancia\obj\Debug\net8.0\Ejercicio - Inductancia.sourcelink.json
+C:\Users\RafiXxALM\Desktop\Espacio De Trabajo Fund. De Programacion II\Asignaciones\Asignacion 2 - Ejercicios Basicos\Ejercicio - Inductancia\bin\Debug\net8.0\Ejercicio - Inductancia.exe
+C:\Users\RafiXxALM\Desktop\Espacio De Trabajo Fund. De Programacion II\Asignaciones\Asignacion 2 - Ejercicios Basicos\Ejercicio - Inductancia\bin\Debug\net8.0\Ejercicio - Inductancia.deps.json
+C:\Users\RafiXxALM\Desktop\Espacio De Trabajo Fund. De Programacion II\Asignaciones\Asignacion 2 - Ejercicios Basicos\Ejercicio - Inductancia\bin\Debug\net8.0\Ejercicio - Inductancia.runtimeconfig.json
+C:\Users\RafiXxALM\Desktop\Espacio De Trabajo Fund. De Programacion II\Asignaciones\Asignacion 2 - Ejercicios Basicos\Ejercicio - Inductancia\bin\Debug\net8.0\Ejercicio - Inductancia.dll
+C:\Users\RafiXxALM\Desktop\Espacio De Trabajo Fund. De Programacion II\Asignaciones\Asignacion 2 - Ejercicios Basicos\Ejercicio - Inductancia\bin\Debug\net8.0\Ejercicio - Inductancia.pdb
+C:\Users\RafiXxALM\Desktop\Espacio De Trabajo Fund. De Programacion II\Asignaciones\Asignacion 2 - Ejercicios Basicos\Ejercicio - Inductancia\obj\Debug\net8.0\Ejercicio - Inductancia.dll
+C:\Users\RafiXxALM\Desktop\Espacio De Trabajo Fund. De Programacion II\Asignaciones\Asignacion 2 - Ejercicios Basicos\Ejercicio - Inductancia\obj\Debug\net8.0\refint\Ejercicio - Inductancia.dll
+C:\Users\RafiXxALM\Desktop\Espacio De Trabajo Fund. De Programacion II\Asignaciones\Asignacion 2 - Ejercicios Basicos\Ejercicio - Inductancia\obj\Debug\net8.0\Ejercicio - Inductancia.pdb
+C:\Users\RafiXxALM\Desktop\Espacio De Trabajo Fund. De Programacion II\Asignaciones\Asignacion 2 - Ejercicios Basicos\Ejercicio - Inductancia\obj\Debug\net8.0\Ejercicio - Inductancia.genruntimeconfig.cache
+C:\Users\RafiXxALM\Desktop\Espacio De Trabajo Fund. De Programacion II\Asignaciones\Asignacion 2 - Ejercicios Basicos\Ejercicio - Inductancia\obj\Debug\net8.0\ref\Ejercicio - Inductancia.dll

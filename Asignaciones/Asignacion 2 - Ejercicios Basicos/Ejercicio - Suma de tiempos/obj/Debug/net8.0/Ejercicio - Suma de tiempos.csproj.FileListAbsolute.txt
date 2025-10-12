@@ -1,0 +1,15 @@
+C:\Users\RafiXxALM\Desktop\Espacio De Trabajo Fund. De Programacion II\Asignaciones\Asignacion 2 - Ejercicios Basicos\Ejercicio - Suma de tiempos\bin\Debug\net8.0\Ejercicio - Suma de tiempos.exe
+C:\Users\RafiXxALM\Desktop\Espacio De Trabajo Fund. De Programacion II\Asignaciones\Asignacion 2 - Ejercicios Basicos\Ejercicio - Suma de tiempos\bin\Debug\net8.0\Ejercicio - Suma de tiempos.deps.json
+C:\Users\RafiXxALM\Desktop\Espacio De Trabajo Fund. De Programacion II\Asignaciones\Asignacion 2 - Ejercicios Basicos\Ejercicio - Suma de tiempos\bin\Debug\net8.0\Ejercicio - Suma de tiempos.runtimeconfig.json
+C:\Users\RafiXxALM\Desktop\Espacio De Trabajo Fund. De Programacion II\Asignaciones\Asignacion 2 - Ejercicios Basicos\Ejercicio - Suma de tiempos\bin\Debug\net8.0\Ejercicio - Suma de tiempos.dll
+C:\Users\RafiXxALM\Desktop\Espacio De Trabajo Fund. De Programacion II\Asignaciones\Asignacion 2 - Ejercicios Basicos\Ejercicio - Suma de tiempos\bin\Debug\net8.0\Ejercicio - Suma de tiempos.pdb
+C:\Users\RafiXxALM\Desktop\Espacio De Trabajo Fund. De Programacion II\Asignaciones\Asignacion 2 - Ejercicios Basicos\Ejercicio - Suma de tiempos\obj\Debug\net8.0\Ejercicio - Suma de tiempos.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\RafiXxALM\Desktop\Espacio De Trabajo Fund. De Programacion II\Asignaciones\Asignacion 2 - Ejercicios Basicos\Ejercicio - Suma de tiempos\obj\Debug\net8.0\Ejercicio - Suma de tiempos.AssemblyInfoInputs.cache
+C:\Users\RafiXxALM\Desktop\Espacio De Trabajo Fund. De Programacion II\Asignaciones\Asignacion 2 - Ejercicios Basicos\Ejercicio - Suma de tiempos\obj\Debug\net8.0\Ejercicio - Suma de tiempos.AssemblyInfo.cs
+C:\Users\RafiXxALM\Desktop\Espacio De Trabajo Fund. De Programacion II\Asignaciones\Asignacion 2 - Ejercicios Basicos\Ejercicio - Suma de tiempos\obj\Debug\net8.0\Ejercicio - Suma de tiempos.csproj.CoreCompileInputs.cache
+C:\Users\RafiXxALM\Desktop\Espacio De Trabajo Fund. De Programacion II\Asignaciones\Asignacion 2 - Ejercicios Basicos\Ejercicio - Suma de tiempos\obj\Debug\net8.0\Ejercicio - Suma de tiempos.sourcelink.json
+C:\Users\RafiXxALM\Desktop\Espacio De Trabajo Fund. De Programacion II\Asignaciones\Asignacion 2 - Ejercicios Basicos\Ejercicio - Suma de tiempos\obj\Debug\net8.0\Ejercicio - Suma de tiempos.dll
+C:\Users\RafiXxALM\Desktop\Espacio De Trabajo Fund. De Programacion II\Asignaciones\Asignacion 2 - Ejercicios Basicos\Ejercicio - Suma de tiempos\obj\Debug\net8.0\refint\Ejercicio - Suma de tiempos.dll
+C:\Users\RafiXxALM\Desktop\Espacio De Trabajo Fund. De Programacion II\Asignaciones\Asignacion 2 - Ejercicios Basicos\Ejercicio - Suma de tiempos\obj\Debug\net8.0\Ejercicio - Suma de tiempos.pdb
+C:\Users\RafiXxALM\Desktop\Espacio De Trabajo Fund. De Programacion II\Asignaciones\Asignacion 2 - Ejercicios Basicos\Ejercicio - Suma de tiempos\obj\Debug\net8.0\Ejercicio - Suma de tiempos.genruntimeconfig.cache
+C:\Users\RafiXxALM\Desktop\Espacio De Trabajo Fund. De Programacion II\Asignaciones\Asignacion 2 - Ejercicios Basicos\Ejercicio - Suma de tiempos\obj\Debug\net8.0\ref\Ejercicio - Suma de tiempos.dll

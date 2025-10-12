@@ -1,0 +1,15 @@
+C:\Users\RafiXxALM\Desktop\Espacio De Trabajo Fund. De Programacion II\Asignaciones\Asignacion 2 - Ejercicios Basicos\Ejercicio - Error relativo\bin\Debug\net8.0\Ejercicio - Error relativo.exe
+C:\Users\RafiXxALM\Desktop\Espacio De Trabajo Fund. De Programacion II\Asignaciones\Asignacion 2 - Ejercicios Basicos\Ejercicio - Error relativo\bin\Debug\net8.0\Ejercicio - Error relativo.deps.json
+C:\Users\RafiXxALM\Desktop\Espacio De Trabajo Fund. De Programacion II\Asignaciones\Asignacion 2 - Ejercicios Basicos\Ejercicio - Error relativo\bin\Debug\net8.0\Ejercicio - Error relativo.runtimeconfig.json
+C:\Users\RafiXxALM\Desktop\Espacio De Trabajo Fund. De Programacion II\Asignaciones\Asignacion 2 - Ejercicios Basicos\Ejercicio - Error relativo\bin\Debug\net8.0\Ejercicio - Error relativo.dll
+C:\Users\RafiXxALM\Desktop\Espacio De Trabajo Fund. De Programacion II\Asignaciones\Asignacion 2 - Ejercicios Basicos\Ejercicio - Error relativo\bin\Debug\net8.0\Ejercicio - Error relativo.pdb
+C:\Users\RafiXxALM\Desktop\Espacio De Trabajo Fund. De Programacion II\Asignaciones\Asignacion 2 - Ejercicios Basicos\Ejercicio - Error relativo\obj\Debug\net8.0\Ejercicio - Error relativo.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\RafiXxALM\Desktop\Espacio De Trabajo Fund. De Programacion II\Asignaciones\Asignacion 2 - Ejercicios Basicos\Ejercicio - Error relativo\obj\Debug\net8.0\Ejercicio - Error relativo.AssemblyInfoInputs.cache
+C:\Users\RafiXxALM\Desktop\Espacio De Trabajo Fund. De Programacion II\Asignaciones\Asignacion 2 - Ejercicios Basicos\Ejercicio - Error relativo\obj\Debug\net8.0\Ejercicio - Error relativo.AssemblyInfo.cs
+C:\Users\RafiXxALM\Desktop\Espacio De Trabajo Fund. De Programacion II\Asignaciones\Asignacion 2 - Ejercicios Basicos\Ejercicio - Error relativo\obj\Debug\net8.0\Ejercicio - Error relativo.csproj.CoreCompileInputs.cache
+C:\Users\RafiXxALM\Desktop\Espacio De Trabajo Fund. De Programacion II\Asignaciones\Asignacion 2 - Ejercicios Basicos\Ejercicio - Error relativo\obj\Debug\net8.0\Ejercicio - Error relativo.sourcelink.json
+C:\Users\RafiXxALM\Desktop\Espacio De Trabajo Fund. De Programacion II\Asignaciones\Asignacion 2 - Ejercicios Basicos\Ejercicio - Error relativo\obj\Debug\net8.0\Ejercicio - Error relativo.dll
+C:\Users\RafiXxALM\Desktop\Espacio De Trabajo Fund. De Programacion II\Asignaciones\Asignacion 2 - Ejercicios Basicos\Ejercicio - Error relativo\obj\Debug\net8.0\refint\Ejercicio - Error relativo.dll
+C:\Users\RafiXxALM\Desktop\Espacio De Trabajo Fund. De Programacion II\Asignaciones\Asignacion 2 - Ejercicios Basicos\Ejercicio - Error relativo\obj\Debug\net8.0\Ejercicio - Error relativo.pdb
+C:\Users\RafiXxALM\Desktop\Espacio De Trabajo Fund. De Programacion II\Asignaciones\Asignacion 2 - Ejercicios Basicos\Ejercicio - Error relativo\obj\Debug\net8.0\Ejercicio - Error relativo.genruntimeconfig.cache
+C:\Users\RafiXxALM\Desktop\Espacio De Trabajo Fund. De Programacion II\Asignaciones\Asignacion 2 - Ejercicios Basicos\Ejercicio - Error relativo\obj\Debug\net8.0\ref\Ejercicio - Error relativo.dll
