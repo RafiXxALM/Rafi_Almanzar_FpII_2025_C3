@@ -1,0 +1,15 @@
+C:\Users\RafiXxALM\Desktop\Espacio De Trabajo Fund. De Programacion II\Asignaciones\Asignacion 2 - Ejercicios Basicos\Ejercicio - Monedas a dólares\bin\Debug\net8.0\Ejercicio - Monedas a dólares.exe
+C:\Users\RafiXxALM\Desktop\Espacio De Trabajo Fund. De Programacion II\Asignaciones\Asignacion 2 - Ejercicios Basicos\Ejercicio - Monedas a dólares\bin\Debug\net8.0\Ejercicio - Monedas a dólares.deps.json
+C:\Users\RafiXxALM\Desktop\Espacio De Trabajo Fund. De Programacion II\Asignaciones\Asignacion 2 - Ejercicios Basicos\Ejercicio - Monedas a dólares\bin\Debug\net8.0\Ejercicio - Monedas a dólares.runtimeconfig.json
+C:\Users\RafiXxALM\Desktop\Espacio De Trabajo Fund. De Programacion II\Asignaciones\Asignacion 2 - Ejercicios Basicos\Ejercicio - Monedas a dólares\bin\Debug\net8.0\Ejercicio - Monedas a dólares.dll
+C:\Users\RafiXxALM\Desktop\Espacio De Trabajo Fund. De Programacion II\Asignaciones\Asignacion 2 - Ejercicios Basicos\Ejercicio - Monedas a dólares\bin\Debug\net8.0\Ejercicio - Monedas a dólares.pdb
+C:\Users\RafiXxALM\Desktop\Espacio De Trabajo Fund. De Programacion II\Asignaciones\Asignacion 2 - Ejercicios Basicos\Ejercicio - Monedas a dólares\obj\Debug\net8.0\Ejercicio - Monedas a dólares.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\RafiXxALM\Desktop\Espacio De Trabajo Fund. De Programacion II\Asignaciones\Asignacion 2 - Ejercicios Basicos\Ejercicio - Monedas a dólares\obj\Debug\net8.0\Ejercicio - Monedas a dólares.AssemblyInfoInputs.cache
+C:\Users\RafiXxALM\Desktop\Espacio De Trabajo Fund. De Programacion II\Asignaciones\Asignacion 2 - Ejercicios Basicos\Ejercicio - Monedas a dólares\obj\Debug\net8.0\Ejercicio - Monedas a dólares.AssemblyInfo.cs
+C:\Users\RafiXxALM\Desktop\Espacio De Trabajo Fund. De Programacion II\Asignaciones\Asignacion 2 - Ejercicios Basicos\Ejercicio - Monedas a dólares\obj\Debug\net8.0\Ejercicio - Monedas a dólares.csproj.CoreCompileInputs.cache
+C:\Users\RafiXxALM\Desktop\Espacio De Trabajo Fund. De Programacion II\Asignaciones\Asignacion 2 - Ejercicios Basicos\Ejercicio - Monedas a dólares\obj\Debug\net8.0\Ejercicio - Monedas a dólares.sourcelink.json
+C:\Users\RafiXxALM\Desktop\Espacio De Trabajo Fund. De Programacion II\Asignaciones\Asignacion 2 - Ejercicios Basicos\Ejercicio - Monedas a dólares\obj\Debug\net8.0\Ejercicio - Monedas a dólares.dll
+C:\Users\RafiXxALM\Desktop\Espacio De Trabajo Fund. De Programacion II\Asignaciones\Asignacion 2 - Ejercicios Basicos\Ejercicio - Monedas a dólares\obj\Debug\net8.0\refint\Ejercicio - Monedas a dólares.dll
+C:\Users\RafiXxALM\Desktop\Espacio De Trabajo Fund. De Programacion II\Asignaciones\Asignacion 2 - Ejercicios Basicos\Ejercicio - Monedas a dólares\obj\Debug\net8.0\Ejercicio - Monedas a dólares.pdb
+C:\Users\RafiXxALM\Desktop\Espacio De Trabajo Fund. De Programacion II\Asignaciones\Asignacion 2 - Ejercicios Basicos\Ejercicio - Monedas a dólares\obj\Debug\net8.0\Ejercicio - Monedas a dólares.genruntimeconfig.cache
+C:\Users\RafiXxALM\Desktop\Espacio De Trabajo Fund. De Programacion II\Asignaciones\Asignacion 2 - Ejercicios Basicos\Ejercicio - Monedas a dólares\obj\Debug\net8.0\ref\Ejercicio - Monedas a dólares.dll

@@ -1,0 +1,15 @@
+C:\Users\RafiXxALM\Desktop\Espacio De Trabajo Fund. De Programacion II\Asignaciones\Asignacion 2 - Ejercicios Basicos\Ejercicio - Total de venta\obj\Debug\net8.0\Ejercicio - Total de venta.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\RafiXxALM\Desktop\Espacio De Trabajo Fund. De Programacion II\Asignaciones\Asignacion 2 - Ejercicios Basicos\Ejercicio - Total de venta\obj\Debug\net8.0\Ejercicio - Total de venta.AssemblyInfoInputs.cache
+C:\Users\RafiXxALM\Desktop\Espacio De Trabajo Fund. De Programacion II\Asignaciones\Asignacion 2 - Ejercicios Basicos\Ejercicio - Total de venta\obj\Debug\net8.0\Ejercicio - Total de venta.AssemblyInfo.cs
+C:\Users\RafiXxALM\Desktop\Espacio De Trabajo Fund. De Programacion II\Asignaciones\Asignacion 2 - Ejercicios Basicos\Ejercicio - Total de venta\obj\Debug\net8.0\Ejercicio - Total de venta.csproj.CoreCompileInputs.cache
+C:\Users\RafiXxALM\Desktop\Espacio De Trabajo Fund. De Programacion II\Asignaciones\Asignacion 2 - Ejercicios Basicos\Ejercicio - Total de venta\obj\Debug\net8.0\Ejercicio - Total de venta.sourcelink.json
+C:\Users\RafiXxALM\Desktop\Espacio De Trabajo Fund. De Programacion II\Asignaciones\Asignacion 2 - Ejercicios Basicos\Ejercicio - Total de venta\bin\Debug\net8.0\Ejercicio - Total de venta.exe
+C:\Users\RafiXxALM\Desktop\Espacio De Trabajo Fund. De Programacion II\Asignaciones\Asignacion 2 - Ejercicios Basicos\Ejercicio - Total de venta\bin\Debug\net8.0\Ejercicio - Total de venta.deps.json
+C:\Users\RafiXxALM\Desktop\Espacio De Trabajo Fund. De Programacion II\Asignaciones\Asignacion 2 - Ejercicios Basicos\Ejercicio - Total de venta\bin\Debug\net8.0\Ejercicio - Total de venta.runtimeconfig.json
+C:\Users\RafiXxALM\Desktop\Espacio De Trabajo Fund. De Programacion II\Asignaciones\Asignacion 2 - Ejercicios Basicos\Ejercicio - Total de venta\bin\Debug\net8.0\Ejercicio - Total de venta.dll
+C:\Users\RafiXxALM\Desktop\Espacio De Trabajo Fund. De Programacion II\Asignaciones\Asignacion 2 - Ejercicios Basicos\Ejercicio - Total de venta\bin\Debug\net8.0\Ejercicio - Total de venta.pdb
+C:\Users\RafiXxALM\Desktop\Espacio De Trabajo Fund. De Programacion II\Asignaciones\Asignacion 2 - Ejercicios Basicos\Ejercicio - Total de venta\obj\Debug\net8.0\Ejercicio - Total de venta.dll
+C:\Users\RafiXxALM\Desktop\Espacio De Trabajo Fund. De Programacion II\Asignaciones\Asignacion 2 - Ejercicios Basicos\Ejercicio - Total de venta\obj\Debug\net8.0\refint\Ejercicio - Total de venta.dll
+C:\Users\RafiXxALM\Desktop\Espacio De Trabajo Fund. De Programacion II\Asignaciones\Asignacion 2 - Ejercicios Basicos\Ejercicio - Total de venta\obj\Debug\net8.0\Ejercicio - Total de venta.pdb
+C:\Users\RafiXxALM\Desktop\Espacio De Trabajo Fund. De Programacion II\Asignaciones\Asignacion 2 - Ejercicios Basicos\Ejercicio - Total de venta\obj\Debug\net8.0\Ejercicio - Total de venta.genruntimeconfig.cache
+C:\Users\RafiXxALM\Desktop\Espacio De Trabajo Fund. De Programacion II\Asignaciones\Asignacion 2 - Ejercicios Basicos\Ejercicio - Total de venta\obj\Debug\net8.0\ref\Ejercicio - Total de venta.dll
