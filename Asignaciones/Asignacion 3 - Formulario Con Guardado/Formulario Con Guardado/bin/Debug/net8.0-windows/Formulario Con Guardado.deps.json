@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "Formulario Con Guardado/1.0.0": {
+        "runtime": {
+          "Formulario Con Guardado.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Formulario Con Guardado/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
