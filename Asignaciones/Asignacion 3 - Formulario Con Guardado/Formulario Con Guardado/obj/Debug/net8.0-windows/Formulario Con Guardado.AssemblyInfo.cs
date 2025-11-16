@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Formulario Con Guardado")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7bd0af6ff8e9dd0bb0d87d4331f3236cb59ed6ce")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+95f89c26967f40f0686a18feabdb8c72c11879ff")]
 [assembly: System.Reflection.AssemblyProductAttribute("Formulario Con Guardado")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Formulario Con Guardado")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

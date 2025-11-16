@@ -92,24 +92,8 @@ namespace Formulario_Con_Guardado
             {
                 var options = new JsonSerializerOptions { WriteIndented = true };
                 var json = JsonSerializer.Serialize(productos, options);
-
-                // Ruta dinámica al Escritorio del usuario + carpetas solicitadas
-                var desktop = Environment.GetFolderPath(Environment.SpecialFolder.DesktopDirectory);
-                var targetDir = Path.Combine(
-                    desktop,
-                    "Espacio De Trabajo Fund. De Programacion II",
-                    "Asignaciones",
-                    "Asignacion 3 - Formulario Con Guardado",
-                    "Formulario Con Guardado",
-                    "Base de Datos"
-                );
-
-                // Asegurar que la carpeta exista
-                Directory.CreateDirectory(targetDir);
-
-                var filePath = Path.Combine(targetDir, "productos.json");
+                var filePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "productos.json");
                 File.WriteAllText(filePath, json);
-
                 MessageBox.Show($"Exportado a:\n{filePath}", "Exportación completa", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (Exception ex)
