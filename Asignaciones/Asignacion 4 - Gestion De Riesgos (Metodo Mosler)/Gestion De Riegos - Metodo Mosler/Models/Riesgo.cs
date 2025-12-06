@@ -10,6 +10,9 @@ namespace MoslerRiskApp.Models
     /// </summary>
     public class Riesgo
     {
+        // Identificador (para persistencia en base de datos)
+        public string Id { get; set; } = string.Empty;
+
         // Fase: Definición
         public string NumeroFicha { get; set; } = string.Empty;
         public string NombreAnalista { get; set; } = string.Empty;

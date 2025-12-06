@@ -6,8 +6,10 @@ using MoslerRiskApp.Models;
 
 namespace MoslerRiskApp
 {
+    // Ventana principal de la aplicación
     public class MainForm : Form
     {
+        // Controles principales
         private TabControl tabControl;
         private TabPage tabDefinition;
         private TabPage tabAnalysis;
@@ -21,6 +23,8 @@ namespace MoslerRiskApp
         private TextBox txtBienActivo;
         private TextBox txtRiesgo;
         private TextBox txtDano;
+        private TextBox txtId; // identificador (será tomado de la BD más adelante)
+        private DataGridView dgvDefinition; // grid para mostrar las entradas guardadas
 
         // Controles de análisis
         private ComboBox cmbFuncion;
@@ -30,36 +34,27 @@ namespace MoslerRiskApp
         private ComboBox cmbAgresion;
         private ComboBox cmbVulnerabilidad;
 
-        // Modelo actual
+        // Modelo en memoria
         private Riesgo currentRiesgo = new Riesgo();
 
+        // Constructor
         public MainForm()
         {
             InitializeComponents();
         }
 
+        // Inicializa los controles del formulario
         private void InitializeComponents()
         {
-            // Form: inicio más ancho
             Text = "Mosler RiskMan";
             StartPosition = FormStartPosition.CenterScreen;
-            ClientSize = new Size(1150, 450); // ancho aumentado
+            ClientSize = new Size(1500, 480);
             Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
 
-            // TabControl
-            tabControl = new TabControl
-            {
-                Dock = DockStyle.Fill,
-                Padding = new Point(12, 8)
-            };
+            tabControl = new TabControl { Dock = DockStyle.Fill, Padding = new Point(12, 8) };
 
-            // Pestañas
             tabDefinition = new TabPage("Definición");
-            InitializeDefinitionTab();
-
             tabAnalysis = new TabPage("Análisis");
-            InitializeAnalysisTab();
-
             tabEvaluation = CreateTab("Evaluación", "Aquí irá la interfaz para evaluar el riesgo.");
             tabClassification = CreateTab("Clasificación", "Aquí irá la interfaz para clasificar el riesgo.");
 
@@ -67,14 +62,11 @@ namespace MoslerRiskApp
 
             Controls.Add(tabControl);
 
-            // Panel inferior con autor
-            var bottomPanel = new Panel
-            {
-                Dock = DockStyle.Bottom,
-                Height = 22,
-                Padding = new Padding(8, 2, 8, 2)
-            };
+            // Pie con autor
+            var bottomPanel = new Panel { Dock = DockStyle.Bottom, Height = 160 };
 
+            // Fila superior del panel inferior: contiene la fecha alineada a la derecha
+            var bottomTopRow = new Panel { Dock = DockStyle.Top, Height = 22, Padding = new Padding(8, 2, 8, 2) };
             var lblAutor = new Label
             {
                 Text = "Autor: Rafi Junior Almanzar",
@@ -86,195 +78,161 @@ namespace MoslerRiskApp
                 Font = new Font(Font.FontFamily, 8F, FontStyle.Regular),
                 Name = "lblAutor"
             };
+            bottomTopRow.Controls.Add(lblAutor);
 
-            bottomPanel.Controls.Add(lblAutor);
-            Controls.Add(bottomPanel);
+            var fechaPanel = new TableLayoutPanel { AutoSize = true, ColumnCount = 2, RowCount = 1 };
+            fechaPanel.ColumnStyles.Add(new ColumnStyle(SizeType.AutoSize));
+            fechaPanel.ColumnStyles.Add(new ColumnStyle(SizeType.AutoSize));
+            var lblFecha = new Label { Text = "Fecha:", AutoSize = true, Padding = new Padding(0, 4, 6, 0), Anchor = AnchorStyles.Top | AnchorStyles.Right };
+            dtpFecha = new DateTimePicker { Width = 120, Format = DateTimePickerFormat.Short, Name = "dtpFecha", Anchor = AnchorStyles.Top | AnchorStyles.Right };
+            fechaPanel.Controls.Add(lblFecha, 0, 0);
+            fechaPanel.Controls.Add(dtpFecha, 1, 0);
+
+            bottomTopRow.Controls.Add(fechaPanel);
+            bottomPanel.Controls.Add(bottomTopRow);
+
+            // Inicializar contenido de pestañas
+            InitializeDefinitionTab();
+            InitializeAnalysisTab();
         }
 
+        // Construye la pestaña "Definición"
         private void InitializeDefinitionTab()
         {
-            var container = new Panel
-            {
-                Dock = DockStyle.Fill,
-                Padding = new Padding(80, 12, 80, 12)
-            };
+            // Contenedor principal de la pestaña
+            var container = new Panel { Dock = DockStyle.Fill, Padding = new Padding(12, 8, 12, 8) };
 
+            // Título principal: situado justo debajo de la barra de pestañas y centrado
             var titleLabel = new Label
             {
-                Text = "Ficha Tecnica Analisis De Riesgos",
-                Font = new Font(Font.FontFamily, 14F, FontStyle.Bold),
+                Text = "Ficha Técnica - Análisis De Riesgos",
+                Font = new Font(Font.FontFamily, 12F, FontStyle.Bold),
                 AutoSize = false,
-                Height = 36,
+                Height = 30,
                 Dock = DockStyle.Top,
                 TextAlign = ContentAlignment.MiddleCenter
             };
 
-            var topFields = new FlowLayoutPanel
-            {
-                Dock = DockStyle.Top,
-                AutoSize = true,
-                FlowDirection = FlowDirection.LeftToRight,
-                WrapContents = false,
-                Padding = new Padding(0, 8, 0, 12)
-            };
+            // Añadir el título al contenedor para que quede centrado y no se solape
+            container.Controls.Add(titleLabel);
 
-            var lblNumero = new Label { Text = "Número de ficha:", AutoSize = true, Padding = new Padding(0, 6, 6, 0) };
-            txtNumeroFicha = new TextBox { Width = 120, Name = "txtNumeroFicha" };
+            // Panel superior derecho para la fecha (se usará también en el panel inferior para posicionarlo junto al DataGrid)
+            var fechaPanel = new TableLayoutPanel { AutoSize = true, ColumnCount = 2, RowCount = 1 };
+            fechaPanel.ColumnStyles.Add(new ColumnStyle(SizeType.AutoSize));
+            fechaPanel.ColumnStyles.Add(new ColumnStyle(SizeType.AutoSize));
+            var lblFecha = new Label { Text = "Fecha:", AutoSize = true, Padding = new Padding(0, 4, 6, 0), Anchor = AnchorStyles.Top | AnchorStyles.Right };
+            dtpFecha = new DateTimePicker { Width = 120, Format = DateTimePickerFormat.Short, Name = "dtpFecha", Anchor = AnchorStyles.Top | AnchorStyles.Right };
+            fechaPanel.Controls.Add(lblFecha, 0, 0);
+            fechaPanel.Controls.Add(dtpFecha, 1, 0);
 
-            var lblAnalista = new Label { Text = "Nombre del analista:", AutoSize = true, Padding = new Padding(12, 6, 6, 0) };
-            txtNombreAnalista = new TextBox { Width = 250, Name = "txtNombreAnalista" };
+            // Contenido principal: dos columnas (izquierda: Bien/Riesgo, derecha: Daño + panel lateral)
+            var contentLayout = new TableLayoutPanel { Dock = DockStyle.Top, ColumnCount = 2, RowCount = 1, AutoSize = true, Padding = new Padding(4, 8, 4, 8) };
+            contentLayout.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 60F));
+            contentLayout.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 40F));
 
-            var lblFecha = new Label { Text = "Fecha:", AutoSize = true, Padding = new Padding(12, 6, 6, 0) };
-            dtpFecha = new DateTimePicker { Width = 140, Format = DateTimePickerFormat.Short, Name = "dtpFecha" };
+            // Columna izquierda: Bien / Activo y Riesgo
+            var leftStack = new TableLayoutPanel { Dock = DockStyle.Fill, ColumnCount = 1, AutoSize = true };
+            var lblBien = new Label { Text = "Bien / Activo", Font = new Font(Font.FontFamily, 9F, FontStyle.Bold), AutoSize = false, Height = 18, Dock = DockStyle.Top, TextAlign = ContentAlignment.MiddleCenter };
+            txtBienActivo = new TextBox { Name = "txtBienActivo", Multiline = true, ScrollBars = ScrollBars.Vertical, Height = GetSingleLineHeight() * 2, MaxLength = 200, Dock = DockStyle.Top, Margin = new Padding(0, 0, 8, 8) };
+            var lblRiesgo = new Label { Text = "Riesgo", Font = new Font(Font.FontFamily, 9F, FontStyle.Bold), AutoSize = false, Height = 18, Dock = DockStyle.Top, TextAlign = ContentAlignment.MiddleCenter };
+            txtRiesgo = new TextBox { Name = "txtRiesgo", Multiline = true, ScrollBars = ScrollBars.Vertical, Height = GetSingleLineHeight() * 2, MaxLength = 200, Dock = DockStyle.Top, Margin = new Padding(0, 0, 8, 8) };
+            leftStack.Controls.Add(lblBien);
+            leftStack.Controls.Add(txtBienActivo);
+            leftStack.Controls.Add(lblRiesgo);
+            leftStack.Controls.Add(txtRiesgo);
 
-            topFields.Controls.AddRange(new Control[] { lblNumero, txtNumeroFicha, lblAnalista, txtNombreAnalista, lblFecha, dtpFecha });
+            // Columna derecha: Daño y panel lateral con ID y Guardar
+            var rightPanel = new TableLayoutPanel { Dock = DockStyle.Fill, ColumnCount = 1, RowCount = 2, AutoSize = true };
 
-            var mainFields = new TableLayoutPanel
-            {
-                Dock = DockStyle.Fill,
-                ColumnCount = 1,
-                AutoSize = true,
-                AutoSizeMode = AutoSizeMode.GrowAndShrink,
-                Padding = new Padding(0, 8, 0, 0)
-            };
+            var damageLayout = new TableLayoutPanel { Dock = DockStyle.Top, ColumnCount = 2, RowCount = 1, AutoSize = true };
+            damageLayout.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 70F));
+            damageLayout.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 30F));
 
-            mainFields.RowCount = 6;
-            mainFields.RowStyles.Clear();
-            mainFields.RowStyles.Add(new RowStyle(SizeType.AutoSize));
-            mainFields.RowStyles.Add(new RowStyle(SizeType.AutoSize));
-            mainFields.RowStyles.Add(new RowStyle(SizeType.AutoSize));
-            mainFields.RowStyles.Add(new RowStyle(SizeType.AutoSize));
-            mainFields.RowStyles.Add(new RowStyle(SizeType.AutoSize));
-            mainFields.RowStyles.Add(new RowStyle(SizeType.AutoSize));
+            var damagePanel = new Panel { Dock = DockStyle.Fill };
+            var lblDano = new Label { Text = "Daño", Font = new Font(Font.FontFamily, 9F, FontStyle.Bold), AutoSize = false, Height = 18, Dock = DockStyle.Top, TextAlign = ContentAlignment.MiddleCenter };
+            txtDano = new TextBox { Name = "txtDano", Multiline = true, ScrollBars = ScrollBars.Vertical, Height = GetSingleLineHeight() * 4, MaxLength = 400, Dock = DockStyle.Fill };
+            damagePanel.Controls.Add(txtDano);
+            damagePanel.Controls.Add(lblDano);
 
-            var lblBien = new Label
-            {
-                Text = "Bien / Activo",
-                Font = new Font(Font.FontFamily, 9F, FontStyle.Bold),
-                AutoSize = false,
-                Height = 20,
-                Dock = DockStyle.Top,
-                TextAlign = ContentAlignment.MiddleCenter,
-                Margin = new Padding(0, 0, 0, 10)
-            };
-            txtBienActivo = new TextBox
-            {
-                Name = "txtBienActivo",
-                Multiline = true,
-                WordWrap = true,
-                ScrollBars = ScrollBars.None,
-                MinimumSize = new Size(0, GetSingleLineHeight()),
-                Height = GetSingleLineHeight(),
-                MaxLength = 200,
-                Dock = DockStyle.Top,
-                Margin = new Padding(0, 0, 0, 12)
-            };
+            var sideStack = new FlowLayoutPanel { FlowDirection = FlowDirection.TopDown, Dock = DockStyle.Fill, WrapContents = false, Padding = new Padding(6), Width = 140 };
+            var lblIdSmall = new Label { Text = "ID (BD):", AutoSize = true, Padding = new Padding(0, 6, 0, 0) };
+            txtId = new TextBox { Width = 120, Name = "txtId" };
+            txtId.TextChanged += (s, e) => currentRiesgo.Id = txtId.Text;
+            txtId.Text = currentRiesgo.Id;
 
-            var lblRiesgo = new Label
-            {
-                Text = "Riesgo",
-                Font = new Font(Font.FontFamily, 9F, FontStyle.Bold),
-                AutoSize = false,
-                Height = 20,
-                Dock = DockStyle.Top,
-                TextAlign = ContentAlignment.MiddleCenter,
-                Margin = new Padding(0, 0, 0, 10)
-            };
-            txtRiesgo = new TextBox
-            {
-                Name = "txtRiesgo",
-                Multiline = true,
-                WordWrap = true,
-                ScrollBars = ScrollBars.None,
-                MinimumSize = new Size(0, GetSingleLineHeight()),
-                Height = GetSingleLineHeight(),
-                MaxLength = 200,
-                Dock = DockStyle.Top,
-                Margin = new Padding(0, 0, 0, 12)
-            };
+            var btnGuardar = new Button { Text = "Guardar", AutoSize = false, Width = txtId.Width, Height = 26 };
+            sideStack.Controls.Add(lblIdSmall);
+            sideStack.Controls.Add(txtId);
+            sideStack.Controls.Add(btnGuardar);
 
-            var lblDano = new Label
-            {
-                Text = "Daño",
-                Font = new Font(Font.FontFamily, 9F, FontStyle.Bold),
-                AutoSize = false,
-                Height = 20,
-                Dock = DockStyle.Top,
-                TextAlign = ContentAlignment.MiddleCenter,
-                Margin = new Padding(0, 0, 0, 10)
-            };
-            txtDano = new TextBox
-            {
-                Name = "txtDano",
-                Multiline = true,
-                WordWrap = true,
-                ScrollBars = ScrollBars.None,
-                MinimumSize = new Size(0, GetSingleLineHeight()),
-                Height = GetSingleLineHeight(),
-                MaxLength = 400,
-                Dock = DockStyle.Top,
-                Margin = new Padding(0, 0, 0, 12)
-            };
+            damageLayout.Controls.Add(damagePanel, 0, 0);
+            damageLayout.Controls.Add(sideStack, 1, 0);
+            rightPanel.Controls.Add(damageLayout);
 
+            contentLayout.Controls.Add(leftStack, 0, 0);
+            contentLayout.Controls.Add(rightPanel, 1, 0);
+
+            // Cuadrícula para mostrar registros guardados (sin filas iniciales)
+            dgvDefinition = new DataGridView { Dock = DockStyle.Fill, AllowUserToAddRows = false, RowHeadersVisible = false, AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill };
+            dgvDefinition.Columns.Add("IdCol", "ID");
+            dgvDefinition.Columns.Add("RiesgoCol", "Riesgo");
+            dgvDefinition.Columns.Add("ActivoCol", "Activo");
+            dgvDefinition.Columns.Add("DanoCol", "Daño");
+
+            // Panel inferior que contiene la fecha arriba a la derecha y el DataGrid debajo
+            var bottomPanel = new Panel { Dock = DockStyle.Bottom, Height = 160 };
+
+            // Fila superior del panel inferior: contiene la fecha alineada a la derecha
+            var bottomTopRow = new Panel { Dock = DockStyle.Top, Height = fechaPanel.PreferredSize.Height + 6 };
+            fechaPanel.Dock = DockStyle.Right;
+            bottomTopRow.Controls.Add(fechaPanel);
+
+            // DataGrid ocupará el resto del espacio debajo de la fila superior
+            dgvDefinition.Dock = DockStyle.Fill;
+            bottomPanel.Controls.Add(dgvDefinition);
+            bottomPanel.Controls.Add(bottomTopRow);
+
+            // Añadir controles al contenedor en el orden solicitado: título, contenido, panel inferior
+            // titleLabel ya fue añadido arriba al contenedor
+            container.Controls.Add(contentLayout);
+            container.Controls.Add(bottomPanel);
+
+            // Eventos de ajuste de altura para cajas multilínea
             txtBienActivo.TextChanged += (s, e) => AdjustHeight((TextBox)s, maxLines: 3);
             txtRiesgo.TextChanged += (s, e) => AdjustHeight((TextBox)s, maxLines: 3);
             txtDano.TextChanged += (s, e) => AdjustHeight((TextBox)s, maxLines: 6);
 
-            mainFields.Controls.Add(lblBien, 0, 0);
-            mainFields.Controls.Add(txtBienActivo, 0, 1);
-            mainFields.Controls.Add(lblRiesgo, 0, 2);
-            mainFields.Controls.Add(txtRiesgo, 0, 3);
-            mainFields.Controls.Add(lblDano, 0, 4);
-            mainFields.Controls.Add(txtDano, 0, 5);
+            // Acción del botón Guardar: añadir fila abajo (primera guardada será primera fila)
+            btnGuardar.Click += (s, e) =>
+            {
+                var id = txtId.Text ?? string.Empty;
+                var riesgo = txtRiesgo.Text ?? string.Empty;
+                var activo = txtBienActivo.Text ?? string.Empty;
+                var dano = txtDano.Text ?? string.Empty;
 
-            container.Controls.Add(mainFields);
-            container.Controls.Add(topFields);
-            container.Controls.Add(titleLabel);
+                dgvDefinition.Rows.Add(id, riesgo, activo, dano);
+                if (dgvDefinition.Rows.Count > 0)
+                    dgvDefinition.FirstDisplayedScrollingRowIndex = Math.Max(0, dgvDefinition.Rows.Count - 1);
+            };
 
             tabDefinition.Controls.Add(container);
         }
 
+        // Construye la pestaña "Análisis" with los seis criterios
         private void InitializeAnalysisTab()
         {
-            var container = new Panel
-            {
-                Dock = DockStyle.Fill,
-                Padding = new Padding(140, 20, 140, 20)
-            };
+            var container = new Panel { Dock = DockStyle.Fill, Padding = new Padding(140, 20, 140, 20) };
 
-            var title = new Label
-            {
-                Text = "Análisis — Seis Criterios",
-                Font = new Font(Font.FontFamily, 13F, FontStyle.Bold),
-                Dock = DockStyle.Top,
-                Height = 34,
-                TextAlign = ContentAlignment.MiddleCenter
-            };
+            var title = new Label { Text = "Análisis — Seis Criterios", Font = new Font(Font.FontFamily, 13F, FontStyle.Bold), Dock = DockStyle.Top, Height = 34, TextAlign = ContentAlignment.MiddleCenter };
 
-            var table = new TableLayoutPanel
-            {
-                Dock = DockStyle.Top,
-                ColumnCount = 3,
-                RowCount = 6,
-                AutoSize = true,
-                CellBorderStyle = TableLayoutPanelCellBorderStyle.None,
-                Padding = new Padding(0, 12, 0, 0)
-            };
-
+            var table = new TableLayoutPanel { Dock = DockStyle.Top, ColumnCount = 3, RowCount = 6, AutoSize = true, CellBorderStyle = TableLayoutPanelCellBorderStyle.None, Padding = new Padding(0, 12, 0, 0) };
             table.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 40F));
             table.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
             table.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 10F));
 
             void AddCriterionRow(int rowIndex, string labelText, ComboBox comboBox, EventHandler onInfoClick, string[] items)
             {
-                var lbl = new Label
-                {
-                    Text = labelText,
-                    Dock = DockStyle.Fill,
-                    TextAlign = ContentAlignment.MiddleCenter,
-                    Font = new Font(Font.FontFamily, 9F, FontStyle.Bold),
-                    Margin = new Padding(0, 6, 0, 6)
-                };
+                var lbl = new Label { Text = labelText, Dock = DockStyle.Fill, TextAlign = ContentAlignment.MiddleCenter, Font = new Font(Font.FontFamily, 9F, FontStyle.Bold), Margin = new Padding(0, 6, 0, 6) };
 
                 comboBox.DropDownStyle = ComboBoxStyle.DropDownList;
                 comboBox.Dock = DockStyle.Fill;
@@ -282,15 +240,7 @@ namespace MoslerRiskApp
                 comboBox.Items.AddRange(items);
                 if (comboBox.Items.Count > 0) comboBox.SelectedIndex = comboBox.Items.Count - 1;
 
-                var btnInfo = new Button
-                {
-                    Text = "i",
-                    Width = 28,
-                    Height = 24,
-                    Dock = DockStyle.Right,
-                    FlatStyle = FlatStyle.Flat,
-                    Margin = new Padding(6)
-                };
+                var btnInfo = new Button { Text = "i", Width = 28, Height = 24, Dock = DockStyle.Right, FlatStyle = FlatStyle.Flat, Margin = new Padding(6) };
                 btnInfo.Click += onInfoClick;
 
                 table.Controls.Add(lbl, 0, rowIndex);
@@ -298,51 +248,11 @@ namespace MoslerRiskApp
                 table.Controls.Add(btnInfo, 2, rowIndex);
             }
 
-            var funcionItems = new[]
-            {
-                "5 - Muy Grave",
-                "4 - Grave",
-                "3 - Medianamente Grave",
-                "2 - Levemente Grave",
-                "1 - Muy Levemente Grave"
-            };
-
-            var sustitucionItems = new[]
-            {
-                "5 - Muy Dificilmente",
-                "4 - Dificilmente",
-                "3 - Sin Mucha Dificultad",
-                "2 - Facilmente",
-                "1 - Muy Facilmente"
-            };
-
-            var profundidadItems = new[]
-            {
-                "5 - Perturbaciones Muy Graves",
-                "4 - Perturbaciones Graves",
-                "3 - Perturbaciones Limitadas",
-                "2 - Perturbaciones Leves",
-                "1 - Perturbaciones Muy Leves"
-            };
-
-            var extensionItems = new[]
-            {
-                "5 - De Carácter Internacional",
-                "4 - De Carácter Nacional",
-                "3 - De Carácter Regional",
-                "2 - De Carácter Local",
-                "1 - De Carácter Individual"
-            };
-
-            var agresionItems = new[]
-            {
-                "5 - Muy Alta",
-                "4 - Alta",
-                "3 - Normal",
-                "2 - Baja",
-                "1 - Muy Baja"
-            };
-
+            var funcionItems = new[] { "5 - Muy Grave", "4 - Grave", "3 - Medianamente Grave", "2 - Levemente Grave", "1 - Muy Levemente Grave" };
+            var sustitucionItems = new[] { "5 - Muy Dificilmente", "4 - Dificilmente", "3 - Sin Mucha Dificultad", "2 - Facilmente", "1 - Muy Facilmente" };
+            var profundidadItems = new[] { "5 - Perturbaciones Muy Graves", "4 - Perturbaciones Graves", "3 - Perturbaciones Limitadas", "2 - Perturbaciones Leves", "1 - Perturbaciones Muy Leves" };
+            var extensionItems = new[] { "5 - De Carácter Internacional", "4 - De Carácter Nacional", "3 - De Carácter Regional", "2 - De Carácter Local", "1 - De Carácter Individual" };
+            var agresionItems = new[] { "5 - Muy Alta", "4 - Alta", "3 - Normal", "2 - Baja", "1 - Muy Baja" };
             var vulnerabilidadItems = agresionItems.ToArray();
 
             cmbFuncion = new ComboBox();
@@ -352,59 +262,12 @@ namespace MoslerRiskApp
             cmbAgresion = new ComboBox();
             cmbVulnerabilidad = new ComboBox();
 
-            AddCriterionRow(0, "F - Función (consecuencias)", cmbFuncion, (s, e) =>
-            {
-                MessageBox.Show(
-                    "Damos un valor a la concecuencias si este riego se materializara.",
-                    "F - Criterio de función",
-                    MessageBoxButtons.OK,
-                    MessageBoxIcon.Information);
-            }, funcionItems);
-
-            AddCriterionRow(1, "S - Sustitución", cmbSustitucion, (s, e) =>
-            {
-                MessageBox.Show(
-                    "Valoramos si los bienes pueden ser sustituidos o remplazados y la dificultad que supone su reemplazo, sustitucion o recambio.",
-                    "S - Sustitución",
-                    MessageBoxButtons.OK,
-                    MessageBoxIcon.Information);
-            }, sustitucionItems);
-
-            AddCriterionRow(2, "P - Profundidad", cmbProfundidad, (s, e) =>
-            {
-                MessageBox.Show(
-                    "Valoramos la perturbacion y efectos Psicologicos que producira. estimamos el nivel de aceptacion psicologia negativa y la imagen corporativa como marca.",
-                    "P - Profundidad",
-                    MessageBoxButtons.OK,
-                    MessageBoxIcon.Information);
-            }, profundidadItems);
-
-            AddCriterionRow(3, "E - Extensión", cmbExtension, (s, e) =>
-            {
-                MessageBox.Show(
-                    "Aqui valoramos el Alcance de los daños, donde podrian llegar los daños.",
-                    "E - Extensión",
-                    MessageBoxButtons.OK,
-                    MessageBoxIcon.Information);
-            }, extensionItems);
-
-            AddCriterionRow(4, "A - Agresión (probabilidad)", cmbAgresion, (s, e) =>
-            {
-                MessageBox.Show(
-                    "Aqui pondremos la probabilidad de que el riego se materialice, la probabilidad de manifestacion.",
-                    "A - Agresión",
-                    MessageBoxButtons.OK,
-                    MessageBoxIcon.Information);
-            }, agresionItems);
-
-            AddCriterionRow(5, "V - Vulnerabilidad", cmbVulnerabilidad, (s, e) =>
-            {
-                MessageBox.Show(
-                    "Aqui pondremos la probabilidad de que se produzcan perdidas o Daños.",
-                    "V - Vulnerabilidad",
-                    MessageBoxButtons.OK,
-                    MessageBoxIcon.Information);
-            }, vulnerabilidadItems);
+            AddCriterionRow(0, "F - Función (consecuencias)", cmbFuncion, (s, e) => MessageBox.Show("Damos un valor a las concecuencias si este riego se materializara.", "F - Criterio de función", MessageBoxButtons.OK, MessageBoxIcon.Information), funcionItems);
+            AddCriterionRow(1, "S - Sustitución", cmbSustitucion, (s, e) => MessageBox.Show("Valoramos si los bienes pueden ser sustituidos o remplazados y la dificultad que supone su reemplazo.", "S - Sustitución", MessageBoxButtons.OK, MessageBoxIcon.Information), sustitucionItems);
+            AddCriterionRow(2, "P - Profundidad", cmbProfundidad, (s, e) => MessageBox.Show("Valoramos la perturbacion y efectos psicologicos que producira.", "P - Profundidad", MessageBoxButtons.OK, MessageBoxIcon.Information), profundidadItems);
+            AddCriterionRow(3, "E - Extensión", cmbExtension, (s, e) => MessageBox.Show("Aqui valoramos el Alcance de los daños.", "E - Extensión", MessageBoxButtons.OK, MessageBoxIcon.Information), extensionItems);
+            AddCriterionRow(4, "A - Agresión (probabilidad)", cmbAgresion, (s, e) => MessageBox.Show("Aqui pondremos la probabilidad de que el riego se materialice.", "A - Agresión", MessageBoxButtons.OK, MessageBoxIcon.Information), agresionItems);
+            AddCriterionRow(5, "V - Vulnerabilidad", cmbVulnerabilidad, (s, e) => MessageBox.Show("Aqui pondremos la probabilidad de que se produzcan perdidas o Daños.", "V - Vulnerabilidad", MessageBoxButtons.OK, MessageBoxIcon.Information), vulnerabilidadItems);
 
             cmbFuncion.SelectedIndexChanged += (s, e) => currentRiesgo.Funcion = ParseSelectedValue(cmbFuncion);
             cmbSustitucion.SelectedIndexChanged += (s, e) => currentRiesgo.Sustitucion = ParseSelectedValue(cmbSustitucion);
@@ -413,26 +276,12 @@ namespace MoslerRiskApp
             cmbAgresion.SelectedIndexChanged += (s, e) => currentRiesgo.Agresion = ParseSelectedValue(cmbAgresion);
             cmbVulnerabilidad.SelectedIndexChanged += (s, e) => currentRiesgo.Vulnerabilidad = ParseSelectedValue(cmbVulnerabilidad);
 
-            var btnCalcular = new Button
-            {
-                Text = "Calcular evaluación",
-                AutoSize = true,
-                Dock = DockStyle.Top,
-                Margin = new Padding(0, 12, 0, 0)
-            };
-            btnCalcular.Click += (s, e) =>
-            {
-                currentRiesgo.CalcularEvaluacion();
-                MessageBox.Show($"Carácter: {currentRiesgo.Carácter:F2}\nProbabilidad: {currentRiesgo.ProbabilidadEvaluada:F2}\nCuantificación: {currentRiesgo.Cuantificacion:F2}", "Resultado (preliminar)", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            };
-
             container.Controls.Add(title);
             container.Controls.Add(table);
-            container.Controls.Add(btnCalcular);
 
             tabAnalysis.Controls.Add(container);
 
-            // Inicializar valores del modelo con selecciones por defecto
+            // Inicializar valores por defecto en modelo
             currentRiesgo.Funcion = ParseSelectedValue(cmbFuncion);
             currentRiesgo.Sustitucion = ParseSelectedValue(cmbSustitucion);
             currentRiesgo.Profundidad = ParseSelectedValue(cmbProfundidad);
@@ -441,6 +290,18 @@ namespace MoslerRiskApp
             currentRiesgo.Vulnerabilidad = ParseSelectedValue(cmbVulnerabilidad);
         }
 
+        // Crea pestañas simples con texto de marcador
+        private TabPage CreateTab(string title, string placeholderText)
+        {
+            var tab = new TabPage(title);
+            var header = new Label { Text = title, Dock = DockStyle.Top, Height = 36, TextAlign = ContentAlignment.MiddleLeft, Font = new Font(Font.FontFamily, 12F, FontStyle.Bold), Padding = new Padding(8, 6, 0, 0) };
+            var placeholder = new Label { Text = placeholderText, Dock = DockStyle.Fill, TextAlign = ContentAlignment.TopLeft, Padding = new Padding(12), ForeColor = Color.DimGray };
+            tab.Controls.Add(placeholder);
+            tab.Controls.Add(header);
+            return tab;
+        }
+
+        // Extrae el número entero del item seleccionado (p. ej. "5 - Muy Grave" -> 5)
         private static int ParseSelectedValue(ComboBox cmb)
         {
             if (cmb?.SelectedItem is string s)
@@ -451,50 +312,20 @@ namespace MoslerRiskApp
             return 1;
         }
 
-        private TabPage CreateTab(string title, string placeholderText)
-        {
-            var tab = new TabPage(title);
-
-            var header = new Label
-            {
-                Text = title,
-                Dock = DockStyle.Top,
-                Height = 36,
-                TextAlign = ContentAlignment.MiddleLeft,
-                Font = new Font(Font.FontFamily, 12F, FontStyle.Bold),
-                Padding = new Padding(8, 6, 0, 0)
-            };
-
-            var placeholder = new Label
-            {
-                Text = placeholderText,
-                Dock = DockStyle.Fill,
-                TextAlign = ContentAlignment.TopLeft,
-                Padding = new Padding(12),
-                ForeColor = Color.DimGray
-            };
-
-            tab.Controls.Add(placeholder);
-            tab.Controls.Add(header);
-
-            return tab;
-        }
-
+        // Calcula la altura de una línea de texto en el font actual
         private static int GetSingleLineHeight()
         {
             return TextRenderer.MeasureText("A", SystemFonts.MessageBoxFont).Height + 6;
         }
 
+        // Ajusta la altura de un TextBox multilínea según su contenido (máximo de líneas)
         private void AdjustHeight(TextBox tb, int maxLines = 5)
         {
             if (tb == null) return;
-
             var minHeight = GetSingleLineHeight();
             var maxHeight = minHeight * maxLines + 6;
-
             var measureSize = TextRenderer.MeasureText(tb.Text + " ", tb.Font, new Size(Math.Max(1, tb.ClientSize.Width - 4), int.MaxValue), TextFormatFlags.WordBreak);
             var desiredHeight = Math.Max(minHeight, measureSize.Height + 6);
-
             if (desiredHeight >= maxHeight)
             {
                 tb.Height = maxHeight;
@@ -507,4 +338,4 @@ namespace MoslerRiskApp
             }
         }
     }
-    }
+}
