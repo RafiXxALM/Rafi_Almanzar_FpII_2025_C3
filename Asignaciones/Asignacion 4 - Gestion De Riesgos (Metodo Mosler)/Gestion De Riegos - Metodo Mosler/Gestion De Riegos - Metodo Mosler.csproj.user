@@ -1,6 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <PropertyGroup />
+  <PropertyGroup>
+    <_LastSelectedProfileId>C:\Users\RafiXxALM\Desktop\Rafi_Almanzar_FpII_2025_C3\Asignaciones\Asignacion 4 - Gestion De Riesgos %28Metodo Mosler%29\Gestion De Riegos - Metodo Mosler\Properties\PublishProfiles\FolderProfile.pubxml</_LastSelectedProfileId>
+  </PropertyGroup>
   <ItemGroup>
     <Compile Update="MainForm.cs">
       <SubType>Form</SubType>

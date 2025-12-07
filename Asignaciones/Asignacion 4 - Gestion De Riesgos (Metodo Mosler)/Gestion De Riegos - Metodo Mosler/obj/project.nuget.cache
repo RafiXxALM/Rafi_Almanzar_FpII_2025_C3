@@ -1,8 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "pBPG9wymsp0=",
+  "dgSpecHash": "ozYAGKfP9zA=",
   "success": true,
   "projectFilePath": "C:\\Users\\RafiXxALM\\Desktop\\Rafi_Almanzar_FpII_2025_C3\\Asignaciones\\Asignacion 4 - Gestion De Riesgos (Metodo Mosler)\\Gestion De Riegos - Metodo Mosler\\Gestion De Riegos - Metodo Mosler.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\RafiXxALM\\.nuget\\packages\\litedb\\5.0.21\\litedb.5.0.21.nupkg.sha512",
+    "C:\\Users\\RafiXxALM\\.nuget\\packages\\system.buffers\\4.5.1\\system.buffers.4.5.1.nupkg.sha512"
+  ],
   "logs": []
 }
